@@ -1,0 +1,72 @@
+* {
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+}
+
+/* Scroll Snapping Styles */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 60px; /* Adjust this value to match your fixed nav height */
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/*
+  justify-content: center;
+  display: flex;
+  */
+.scroll-item {
+  padding: 30px;
+  scroll-snap-align: start;
+  height: 100vh;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Fixed Navigation Styles */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.fixed-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.card {
+  background: hsla(0, 0%, 0%, 0.55);
+  backdrop-filter: blur(50px) saturate(150%) brightness(10%);
+  -webkit-backdrop-filter: blur(50px) saturate(150%) brightness(10%);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-text{
+  font-size:19px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
