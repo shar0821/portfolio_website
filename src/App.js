@@ -8,15 +8,16 @@ function App() {
   return (
     <>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
-      <div class="fixed-nav">
+      
+      {/* <div class="fixed-nav">
         <div class="logo">Portfolio</div>
-      </div>
+      </div> */}
       <Dots />
       <div class="scroll-container">
         <div class="scroll-item">
           <div class="card text-white bg-dark mb-3">
             <div class="card-body ">
-              <h2>Welcome to my Portfolio</h2>
+              <h2>Welcome to my Portfolio!</h2>
               <p class="card-text">Here you can find information about my projects and skills.</p>
             </div>
             
@@ -26,6 +27,7 @@ function App() {
         <div class="scroll-item">
           <h2>My Projects</h2>
           <div class="column">
+            <Projects props={{ title: 'AI Chatbot with RAG', subtitle: 'Aug 2024', content: "Developed an AI chatbot using RAG. Learned the basics of RAG and implemented the application using Streamlit and LlamaIndex" }}/>
             <Projects props={{ title: 'Object Identifier using AWS Rekognition', subtitle: 'June 2024', content: "Implemented an object recognition system using AWS Rekognition and OpenCV. Learned the basics of AWS and implemented the application from scratch." }} />
             <Projects props={{ title: 'Glaucoma Prediction System using Segmentation and Few-Shot Learning', subtitle: 'Dec 2022-May 2023', content: "Created a hybrid ensemble architecture to detect glaucoma from fundus and OCT images that showed an improvement in accuracy by 3%. Designed a pipeline consisting of a segmentation model (U-Net) followed by a pre-trained model (VGG19) to predict glaucoma from fundus images. Developed a few-shot learning model (Siamese Network) to predict glaucoma from OCT images" }} />
             <Projects props={{ title: 'AI-Powered Nutritional Analyzer', subtitle: 'Aug 2022-Nov 2022', content: "Led a team of 4 to develop a web application that uses images taken from a device to educate the user about the nutritional value of the food item queried. Created a classification model to detect the food item queried and an API was used to retrieve nutritional content information which is rendered in a User Interface" }} />
@@ -34,7 +36,9 @@ function App() {
           </div>
 
         </div>
+        <br/>
         <div class="scroll-item">
+          <br/>
           <h2>Contact Me</h2>
           <div class="text-center justify-content-center">
             <h4 class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 20 20">
